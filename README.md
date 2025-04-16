@@ -38,10 +38,10 @@ Here’s how to get the app running on your computer, even if you’re new to th
    - In your terminal, move to the folder by typing:
 
      ```bash
-     cd ai-economic-impact-simulator
+     cd AI-EIA
      ```
 
-   - Replace “ai-economic-impact-simulator” with wherever you unzipped the files.
+   - Replace “AI-EIA.git" with wherever you unzipped the files.
 
 3. **Install the Tools**:
 
