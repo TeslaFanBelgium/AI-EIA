@@ -28,7 +28,7 @@ Here’s how to get the app running on your computer, even if you’re new to th
    - If you use Git (a tool for downloading code), open a terminal (search “cmd” on Windows or “terminal” on Mac) and type:
 
      ```bash
-     git clone https://github.com/your-repo/ai-economic-impact-simulator.git
+     git clone https://github.com/TeslaFanBelgium/AI-EIA.git
      ```
 
    - No Git? Just download the ZIP file from the GitHub page and unzip it to a folder.
