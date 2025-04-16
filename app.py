@@ -24,14 +24,15 @@ def index():
     
     if request.method == 'POST':
         # Update parameters from form inputs
-        params['jobs_displaced'] = int(request.form.get('jobs_displaced', DEFAULTS['jobs_displaced']))
+        params['jobs_displaced'] = int(float(request.form.get('jobs_displaced', DEFAULTS['jobs_displaced'] / 1_000_000)) * 1_000_000)
         params['avg_wage'] = float(request.form.get('avg_wage', DEFAULTS['avg_wage']))
         params['labor_tax_rate'] = float(request.form.get('labor_tax_rate', DEFAULTS['labor_tax_rate']))
         params['automation_tax_per_job'] = float(request.form.get('automation_tax_per_job', DEFAULTS['automation_tax_per_job']))
         params['ubi_payment'] = float(request.form.get('ubi_payment', DEFAULTS['ubi_payment']))
         params['efficiency_savings_pct'] = float(request.form.get('efficiency_savings_pct', DEFAULTS['efficiency_savings_pct']))
         params['ai_gdp_growth'] = float(request.form.get('ai_gdp_growth', DEFAULTS['ai_gdp_growth']))
-        params['total_workforce'] = int(request.form.get('total_workforce', DEFAULTS['total_workforce']))
+        # Handle total_workforce: convert from millions to actual number
+        params['total_workforce'] = int(float(request.form.get('total_workforce', DEFAULTS['total_workforce'] / 1_000_000)) * 1_000_000)
         params['baseline_gdp'] = DEFAULTS['baseline_gdp']
 
     # Calculations
